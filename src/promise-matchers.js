@@ -34,9 +34,9 @@ jasmine.Env.prototype.toHaveBeenRejectedWith = function(promise, done, expectati
             expect('promise').toBe('rejected');
             done();
         },
-        function(args) {
+        function(reason) {
             try {
-                expectation(args);
+                expectation(reason);
                 done();
             } catch (ex) {
                 done(ex);
@@ -47,9 +47,9 @@ jasmine.Env.prototype.toHaveBeenRejectedWith = function(promise, done, expectati
 
 jasmine.Env.prototype.toHaveBeenResolvedWith = function(promise, done, expectation) {
     promise.then(
-        function(args) {
+        function(result) {
             try {
-                expectation(args);
+                expectation(result);
                 done();
             } catch (ex) {
                 done(ex);
