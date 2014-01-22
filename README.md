@@ -1,7 +1,5 @@
 # promise-matchers
 
-    npm install promise-matchers --save-dev
-
 This library introduces a simple set of custom Jasmine matchers for use with asynchronous JavaScript.
 It can be used with any **promises** library that implements the
 [Promises/A+](http://promises-aplus.github.io/promises-spec/) specification, such as
@@ -28,7 +26,7 @@ Either you use in your browser jasmine test runner by adding it after the script
 Or when using [jasmine-node](https://github.com/mhevery/jasmine-node) you can simply install the matchers via:
 
 ~~~bash
-npm install promise-matchers
+npm install promise-matchers --save -dev
 ~~~
 
 And make them available in your spec-file:
