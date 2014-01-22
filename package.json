@@ -1,6 +1,6 @@
 {
     "name": "promise-matchers",
-    "version": "0.9.2",
+    "version": "0.9.3",
     "main": "src/promise-matchers",
     "description": "Custom jasmine matchers for testing asynchronous javascript",
     "license": "Apache 2.0",
