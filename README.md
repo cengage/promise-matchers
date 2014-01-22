@@ -48,34 +48,40 @@ require([
 1.
 
 ```javascript
-    it('succeeds', function(done) {
-        var promise = foo();
-        expect(promise).toHaveBeenResolved(done);
-    });
+it('succeeds', function(done) {
+    var promise = foo();
+    expect(promise).toHaveBeenResolved(done);
+});
 ```
 2.
 
-    it('fails', function(done) {
-        var promise = foo();
-        expect(promise).toHaveBeenRejected(done);
-    });
+```javascript
+it('fails', function(done) {
+    var promise = foo();
+    expect(promise).toHaveBeenRejected(done);
+});
+```
 3.
 
-    it('succeeds with value of 3', function(done) {
-        var promise = foo();
-        expect(promise).toHaveBeenResolvedWith(done, function(result) {
-            expect(result).toBe(3);
-        });
+```javascript
+it('succeeds with value of 3', function(done) {
+    var promise = foo();
+    expect(promise).toHaveBeenResolvedWith(done, function(result) {
+        expect(result).toBe(3);
     });
+});
+```
 4.
 
-    it('fails without saving', function(done) {
-        var save = spyOn(Bar, 'save');
-        var promise = foo();
-        expect(promise).toHaveBeenRejectedWith(done, function() {
-            expect(save).not.toHaveBeenCalled();
-        });
+```javascript
+it('fails without saving', function(done) {
+    var save = spyOn(Bar, 'save');
+    var promise = foo();
+    expect(promise).toHaveBeenRejectedWith(done, function() {
+        expect(save).not.toHaveBeenCalled();
     });
+});
+'''
 
 ## Notes
 
