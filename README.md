@@ -85,8 +85,12 @@ it('fails without saving', function(done) {
 
 ## Notes
 
-1. If a promise with an expectation of **toHaveBeenResolved** or **toHaveBeenResolvedWith** is rejected, the matcher fails with the message **expected promise to be resolved**.
-2. If a promise with an expectation of **toHaveBeenRejected** or **toHaveBeenRejectedWith** is resolved, the matcher fails with the message **expected promise to be rejected**.
-3. If an expectation passed to **toHaveBeenResolvedWith** or **toHaveBeenRejectedWith** fails, the matcher fails with that expectation's failure message.
-4. If an expectation passed to **toHaveBeenResolvedWith** or **toHaveBeenRejectedWith** throws an exception, the matcher fails with the exception text.
+1. If a promise with an expectation of **toHaveBeenResolved** or **toHaveBeenResolvedWith** is rejected,
+the matcher fails with the message **Expected promise to have been resolved**.
+2. If a promise with an expectation of **toHaveBeenRejected** or **toHaveBeenRejectedWith** is resolved,
+the matcher fails with the message **Expected promise to have been rejected**.
+3. If an expectation passed to **toHaveBeenResolvedWith** or **toHaveBeenRejectedWith** fails,
+the matcher fails with that expectation's failure message.
+4. If an expectation passed to **toHaveBeenResolvedWith** or **toHaveBeenRejectedWith** throws an exception,
+the matcher fails with the exception text.
 5. These matchers will not behave properly with **not**.

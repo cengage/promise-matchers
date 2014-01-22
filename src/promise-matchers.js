@@ -31,8 +31,7 @@ jasmine.Matchers.prototype.toHaveBeenResolved = function() {
 jasmine.Env.prototype.toHaveBeenRejectedWith = function(promise, done, expectation) {
     promise.then(
         function() {
-            expect('promise').toBe('rejected');
-            done();
+            done('Expected promise to have been rejected');
         },
         function(reason) {
             try {
@@ -56,8 +55,7 @@ jasmine.Env.prototype.toHaveBeenResolvedWith = function(promise, done, expectati
             }
         },
         function() {
-            expect('promise').toBe('resolved');
-            done();
+            done('Expected promise to have been resolved');
         }
     );
 };
