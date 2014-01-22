@@ -47,10 +47,12 @@ require([
 
 1.
 
+```javascript
     it('succeeds', function(done) {
         var promise = foo();
         expect(promise).toHaveBeenResolved(done);
     });
+```
 2.
 
     it('fails', function(done) {
