@@ -86,9 +86,9 @@ it('fails without saving', function(done) {
 ## Notes
 
 1. If a promise with an expectation of **toHaveBeenResolved** or **toHaveBeenResolvedWith** is rejected,
-the matcher fails with the message **Expected promise to have been resolved**.
+the matcher fails with the message **Expected promise to have been resolved** or with the message **Expected promise to have been resolved but it was rejected with: [possible promise reject message]**.
 2. If a promise with an expectation of **toHaveBeenRejected** or **toHaveBeenRejectedWith** is resolved,
-the matcher fails with the message **Expected promise to have been rejected**.
+the matcher fails with the message **Expected promise to have been rejected but it was resolved with: [possible promise resolve value]**.
 3. If an expectation passed to **toHaveBeenResolvedWith** or **toHaveBeenRejectedWith** fails,
 the matcher fails with that expectation's failure message.
 4. If an expectation passed to **toHaveBeenResolvedWith** or **toHaveBeenRejectedWith** throws an exception,
